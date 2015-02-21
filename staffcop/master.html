@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-ru" >
+<head>
+    <title>Staffcop Enterprise</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="NONE,NOARCHIVE" />
+    <!-- Le styles, placed after extrastyle to correctly override default styling -->
+    <link href="/static/admin_bootstraped/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/admin_bootstraped/admin/css/overrides.css" />
+    <link rel="stylesheet" href="/static/fontello/css/fontello.css">
+    <link rel="stylesheet" href="/static/fontello/css/animation.css">
+    <!--[if IE 7]><link rel="stylesheet" href="/static/fontello/css/fontello-ie7.css"><![endif]-->
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    
+
+    <script type="text/javascript">window.__admin_media_prefix__ = "/static/admin_bootstraped/admin/";</script>
+    <script src="/static/admin_bootstraped/admin/js/jquery-1.9.1.min.js"></script>
+    <script src="/static/admin_bootstraped/bootstrap/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/css/cal-heatmap.css"/>
+    <!-- Deps -->
+    <script type="text/javascript" src="/static/js/lib/angular-1.2.0-rc.3/angular.js"></script>
+    <script type="text/javascript" src="/static/js/lib/angular-1.2.0-rc.3/angular-route.js"></script>
+    <script type="text/javascript" src="/static/js/lib/angular-1.2.0-rc.3/angular-resource.js"></script>
+    <script type="text/javascript" src="/static/js/lib/angular-1.2.0-rc.3/angular-cookies.js"></script>
+    <script type="text/javascript" src="/static/js/lib/angular-1.2.0-rc.3/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/static/js/lib/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/lib/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/static/js/lib/cal-heatmap.js"></script>
+    <script type="text/javascript" src="/static/js/lib/excellentexport.js"></script>
+    <script type="text/javascript" src="/static/js/lib/crossfilter.min.js"></script>
+    <!-- Apps -->
+    <script type="text/javascript" src="/static/js/globals.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+    <script type="text/javascript" src="/static/js/models.js"></script>
+    <script type="text/javascript" src="/static/js/root.js"></script>
+    <script type="text/javascript" src="/static/js/datepicker.js"></script>
+    <script type="text/javascript" src="/static/js/aggregate.js"></script>
+    <script type="text/javascript" src="/static/js/facts.js"></script>
+    <script type="text/javascript" src="/static/js/stat.js"></script>
+    <script type="text/javascript" src="/static/js/pie.js"></script>
+    <script type="text/javascript" src="/static/js/lenta.js"></script>
+    <script type="text/javascript" src="/static/js/splitter.js"></script>
+    <script type="text/javascript" src="/static/js/report.js"></script>
+    <script type="text/javascript" src="/static/js/modals.js"></script>
+    <script type="text/javascript" src="/static/js/ng-infinite-scroll-fork.js"></script>
+    <script type="text/javascript" src="/static/js/colresize.js"></script>
+    
+
+    <script type="text/javascript">
+//<![CDATA[
+            (function($) {
+                $(document).ready(function() {
+                    $('input[type="submit"]').addClass('btn');
+                    $('[title]').tooltip();
+                });
+            }(jQuery));
+    //]]>
+    </script>
+</head>
+
+<body class="">
+
+
+
+    
+        
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                
+            </div>
+        </div>
+    
+
+    
+        
+    </div>
+    
+
+    <div style="margin-top: 50px; padding: 0 20px;">
+    
+<div id="content-main">
+<form class="form-signin form-horizontal" action="" method="post" id="login-form"><input type='hidden' name='csrfmiddlewaretoken' value='dHmSYbtix0bqCD8o1QtN5xvpXdoDO6P4' />
+  <div class="form-signin-inner">
+  
+  
+  <div class="control-group">
+    <div class="control-label">
+        <label for="id_username" class="required">Имя пользователя</label> 
+    </div>
+    <div class="controls">
+        <input id="id_username" maxlength="254" name="username" type="text" />
+        <span class="help-inline"></span>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="control-label">
+        <label for="id_password" class="required">Пароль</label> 
+    </div>
+    <div class="controls">
+        <input id="id_password" maxlength="4096" name="password" type="password" />
+        <span class="help-inline"></span>
+    </div>
+    <input type="hidden" name="this_is_the_login_form" value="1" />
+    <input type="hidden" name="next" value="/license/" />
+  </div>
+  
+  
+  </div>
+  <div class="form-actions">
+    <input type="submit" value="Войти" class="btn btn-primary" />
+  </div>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#id_username').attr('autocapitalize', 'off').focus();
+})
+</script>
+</div>
+
+    </div>
+    
+
+
+<!-- Spinners and alerts -->
+<div id="global-spinner" style="display:none;" class="alert-block alert-info">
+    <i class="icon-loading animate-spin"></i>
+    <b>Загрузка данных. Пожалуйста подождите. <a href="#" id="global-spinner-cancel"><i class="icon-cancel"></i></a></b>
+</div> 
+
+<div id="global-alert" style="display:none;" class="alert-block alert-success">
+    <b id="global-alert-message"></b>
+</div> 
+
+<div id="image-spinner" style="display:none;" class="alert-block alert-info">
+    <i class="icon-loading animate-spin"></i>
+    <b>Загрузка изображения. Пожалуйста подождите</b>
+</div> 
+
+</body>
+</html>
