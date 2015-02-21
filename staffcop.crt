@@ -1,3 +1,37 @@
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: CN=Atom
+        Validity
+            Not Before: Jul 11 05:55:33 2013 GMT
+            Not After : Jul 11 05:55:33 2014 GMT
+        Subject: C=RU, ST=Some-State, O=Atom Security, CN=gateway.staffcop.su
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c3:38:df:a5:4e:c6:31:e0:e9:b9:b9:46:30:1b:
+                    5d:07:c2:40:4c:b1:bc:30:c6:2a:bb:1c:59:1d:02:
+                    58:26:2a:ce:37:1e:22:4b:cb:65:ca:0b:db:ef:ad:
+                    23:e0:59:af:b9:a5:64:08:f0:3d:ca:b0:2a:62:93:
+                    ec:1f:19:25:37:95:4f:3a:c4:2d:13:51:7f:f3:bb:
+                    f5:03:ce:16:b7:93:7a:bd:52:98:ad:b7:20:ad:97:
+                    b3:71:ca:ec:cf:4a:a8:e2:0f:ca:ce:9f:07:6e:f0:
+                    9b:1e:1c:b6:b0:89:3b:41:bf:38:f7:d1:25:38:cc:
+                    24:b7:98:7a:99:a1:83:25:65
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+         25:74:fe:af:80:47:ca:ab:00:b8:51:4e:2a:31:c0:00:01:80:
+         81:d2:36:84:f6:23:44:15:62:e8:a4:33:d7:7c:88:7a:d8:87:
+         7b:c5:de:94:6e:6f:ed:01:66:a5:2b:0e:f8:fd:7a:4e:db:d4:
+         43:74:da:f3:e4:32:e4:fc:b9:df:e2:d2:cd:ef:8a:e6:48:54:
+         c4:ae:ec:f7:3c:cf:b3:f8:54:6f:1e:72:c7:f5:a2:36:35:fa:
+         3a:bf:07:70:f7:41:6d:30:03:4a:eb:46:5d:54:e1:71:9d:49:
+         14:2c:d5:7c:b7:8d:7e:de:f1:0c:78:94:30:0d:7f:d0:b8:ce:
+         43:67
+
 -----BEGIN CERTIFICATE-----
 MIIB1jCCAT8CAQEwDQYJKoZIhvcNAQEFBQAwDzENMAsGA1UEAxMEQXRvbTAeFw0x
 MzA3MTEwNTU1MzNaFw0xNDA3MTEwNTU1MzNaMFgxCzAJBgNVBAYTAlJVMRMwEQYD
