@@ -1,0 +1,445 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>SSL Certificate Checker - Diagnostic Tool | DigiCert.com</title>
+	<meta name="DESCRIPTION" content="Problem with your SSL certificate installation? Enter the name of your server and our SSL Certificate checker will help you locate the problem." />			<link rel="canonical" href="https://www.digicert.com/help/" />
+
+	<!-- CSS -->
+	<link href="https://edge3.digicert.com/CB1413409/css/ks.css.php" rel="stylesheet" type="text/css" />
+	<link href="/help/css/index.css?cbr=CB1413409" rel="stylesheet" type="text/css" />	
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="/css/ie7.css">
+	<![endif]-->
+
+	<!-- Inline JS -->
+	<script type="text/javascript"></script>
+
+	<!-- Scripts -->
+		<script type="text/javascript" src="https://edge1.digicert.com/CB1413409/js/ks.base.js.php" charset="utf-8"></script>
+	
+	
+	<script type="text/javascript" src="/api/check-host.js?r=CB1413409?cbr=CB1413409" charset="utf-8"></script><script type="text/javascript" src="//cdn.optimizely.com/js/101549796.js?cbr=CB1413409" charset="utf-8"></script>
+	<!-- Alligators -->
+	
+	<link rel="shortcut icon" href="/favicon.ico" >
+	<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8640690-1'],['_setDomainName','www.digicert.com']);
+  if (typeof trackedPageView == 'undefined') { _gaq.push(['_trackPageview']); }  
+function checkForCookie(cookiename) {
+	var cookiecheck = 0;
+	var cookies = document.cookie.split(';');
+	for (var i=0;i<cookies.length;i++){
+		while (cookies[i].charAt(0)==' ') cookies[i] = cookies[i].substring(1,cookies[i].length);
+		if (cookies[i].indexOf(cookiename+'=') == 0){
+			cookiecheck = 1;
+		} //if
+	} //for
+	return cookiecheck;
+}
+
+function setCookie(c_name,value,exdays)
+{
+	var now= new Date();
+	var exdate=new Date();
+	exdate.setTime(now.getTime() + 1000*60*60*24*exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toGMTString()) + "; path=/";
+	document.cookie=c_name + "=" + c_value;
+}
+
+if (checkForCookie('order_origin') === 0)
+{
+	var origin_cookie = "l="+_varTruncate(window.location.pathname);
+	origin_cookie += "&s=" + _varTruncate(window.location.search);
+	origin_cookie += "&r=" + _varTruncate(document.referrer.substr(7,document.referrer.length));
+	origin_cookie += "&q=" + _varTruncate(document.referrer.match(/(?:([#]|[?]|[&]))(?:(encquery|k|p|q|qs|qt|query|rdata|search_word|szukaj|terms|text|wd|words))=[^&]*/i));
+	setCookie('order_origin', origin_cookie, 1);
+}
+function _varTruncate(input) {
+	var byteLength = 63;
+	//we can't decode if we happen to truncate part-way through an encoded entity so if the encoded string has a % near 63 characters, we truncate before the % before decoding
+	if (encodeURIComponent(input).substr(byteLength-2,1) == "%"){
+		truncatedInput = decodeURIComponent(encodeURIComponent(input).substr(0,byteLength-2));
+	} else if (encodeURIComponent(input).substr(byteLength-1,1) == "%"){
+		truncatedInput = decodeURIComponent(encodeURIComponent(input).substr(0,byteLength-1));
+	} else {
+		truncatedInput = decodeURIComponent(encodeURIComponent(input).substr(0,byteLength));
+	}
+	return truncatedInput;
+}
+
+	try {
+		if (checkForCookie('__utma') === 0){
+						_gaq.push(['_setCustomVar', 1, "l", _varTruncate(window.location.pathname), 1]);
+			_gaq.push(['_setCustomVar', 2, "s", _varTruncate(window.location.search), 1]);
+			_gaq.push(['_setCustomVar', 3, "r", _varTruncate(document.referrer.substr(7,document.referrer.length)), 1]);
+			_gaq.push(['_setCustomVar', 4, "q", _varTruncate(document.referrer.match(/(?:([#]|[?]|[&]))(?:(encquery|k|p|q|qs|qt|query|rdata|search_word|szukaj|terms|text|wd|words))=[^&]*/i)[0]), 1]);
+		}
+	} catch (err) {}
+  
+ (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); </script>
+
+	</head>
+<body >
+<!-- Adobe Marketing Cloud Tag Loader Code
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.adobe.com/solutions/digital-marketing.html -->
+<script type="text/javascript">//<![CDATA[
+	var amc=amc||{};if(!amc.on){amc.on=amc.call=function(){}};
+	document.write("<scr"+"ipt type=\"text/javascript\" src=\"//www.adobetag.com/d1/v2/ZDEtZGlnaWNlcnQtMTQ1MjItMzkxMy0=/amc.js\"></sc"+"ript>");
+	//]]></script>
+<!-- End Adobe Marketing Cloud Tag Loader Code -->
+<h1 >DigiCert&reg; SSL Installation Diagnostics Tool</h1>
+<div id="mainContainer">
+<div id="mainMenu">
+	<div class="container">
+		<ul class="nav-primary">
+			<li id="productsMenuID">
+				<a href="/ssl-certificate.htm">
+					SSL Certificates				</a>
+			</li>
+			<li id="codeSigningMenuID">
+				<a href="/code-signing">
+					Code Signing Certificates				</a>
+			</li>
+			<li id="enterpriseMenuID">
+				<a href="/managed-pki-ssl.htm">
+					Enterprise				</a>
+			</li>
+			<li id="supportMenuID">
+				<a href="/support">
+					Support				</a>
+			</li>
+			<li id="partnerMenuID">
+				<a href="/digital-certificate-reseller-program.htm">
+					Partners				</a>
+			</li>
+			<li id="companyMenuID">
+				<a href="/about-digicert.htm">
+					About Us				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<script src="/js/digicert-reviews.js?CBR=CB1413409"></script>
+<link rel="stylesheet" href="/css/digicert_reviews.css?CBR=CB1413409">
+<div itemscope itemtype="http://schema.org/Product">
+<meta itemprop="name" content="SSL Certificate Check Install">
+<meta itemprop="description" content="Welcome to DigiCert SSL Help. If you are having a problem with your SSL certificate installation, please enter the name of your server and we will attempt to diagnose the problem and verify proper SSL installation.">
+<meta itemprop="image" content="http://edge1.digicert.com/videos/splash_images/robo.jpg">
+<style>
+	#live-chat-box {
+	    background: url("/images/live-chat-box-small.png") no-repeat scroll left top transparent;
+	    float: right;
+	    height: 212px;
+	    margin-left: 36px;
+	    position: relative;
+	    width: 361px;
+	}
+	#live-chat-box .heading {
+	    color: white;
+	    font-size: 23px;
+	    font-style: italic;
+	    font-weight: bold;
+	    position: relative;
+	    text-align: center;
+	    top: 9px;
+	}
+	#live-chat-box .content {
+	    font-style: italic;
+	    line-height: 1.25;
+	    margin: 32px 110px 23px 38px;
+	}
+	#live-chat-box .ghn {
+	    font-size: 23px;
+	    font-weight: bold;
+	}
+	#live-chat-box p {
+		margin-left: 38px;
+	}
+	#live-chat-box .ks-button {
+		background: linear-gradient(to bottom, #99CA3A, #4A9D44) repeat scroll 0 0 #ED9801;
+	}
+</style>
+
+<div id="mainContent" class="main-content">
+	<div class="container" style="position:relative;">
+		<div id="live-chat-box" style="position: absolute; right: 0px; top: 0px;">
+			<div class="heading">LIVE CHAT</div>
+			<div class="content">
+				<div class="ghn">Get Help Now!</div>
+				Click here for live help with your SSL installation.
+			</div>
+			<p>
+				<a class="ks-button" href="javascript:void(0);" onclick="window.open('https://chat.digicert.com/1/rRouter.asp?groupid=1&amp;websiteid=0&amp;departmentid=1&amp;dl='+escape(document.location.href)+'','','width=450,height=400');">CHAT NOW</a>
+			</p>
+		</div>
+		
+		<h2>SSL Certificate Checker</h2>
+        <b>DigiCert Customer Reviews:</b>
+        <span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" id="digicert_review_inline">
+            <span class="stars">★★★★★</span> <span itemprop="ratingValue" id="digicert_review_inline">5</span> (<span itemprop="reviewCount"><a href="#digicert_reviews">1187</a></span>)        </span>
+	
+<br>
+		<p style="width: 615px;">
+			If you are having a problem with your SSL certificate installation, please enter the name of your server. Our installation diagnostics tool will help you locate the problem and verify your SSL Certificate installation. 
+		</p>
+		<div id="host-form" class="container">
+			<p>
+				<span>Server Address:</span> <span class="subtext">(Ex. www.digicert.com)</span>
+			</p>
+			<form name="hostForm" id="hostForm" style="margin-top: -8px;" action="/help/index.htm" onsubmit="return checkServer();">
+				<input type="text" id="host" name="host" value="" />
+				<input type="hidden" id="order_id" name="order_id" value="" />
+                <table border="0">
+                    <tr>
+                        <td>
+                            <label><input id="heartbleed" type="checkbox" value="heartbleed" title="Include Heartbleed check"/>Check for Heartbleed vulnerability</label>
+                        </td>
+                    </tr>
+					<tr>
+                        <td>
+                            <button type="submit" class="ks-button secondary">CHECK SERVER</button>
+                        </td>
+					</tr>
+                    </table>
+                    <span id="loadingMessage" style="display:none;"><img src="https://edge1.digicert.com/images/ajax-loader.gif" alt="Loading" />Checking...</span>
+			</form>
+			<div id="results"></div>
+		</div>
+	</div>
+	<div class="product-box product-box-inset">
+		<div class="container">
+			<h2 class="h2-large">Helpful SSL Tools</h2>
+			<ul>
+                <li><a href="https://www.digicert.com/cert-inspector.htm">DigiCert&reg; Certificate Inspector</a> - Discover and analyze every certificate in your enterprise.</li>
+                <li><a href="https://www.digicert.com/util/">DigiCert Certificate Utility for Windows</a> – Simplifies SSL and code signing certificate management and use.</li>
+				<li><a href="https://www.digicert.com/easy-csr/exchange2007.htm">Exchange 2007</a> / <a href="https://www.digicert.com/easy-csr/exchange2010.htm">Exchange 2010 CSR Wizard</a> - Exchange administrators love our Exchange CSR Wizards. They help you create a New-ExchangeCertificate command without having to dig through a manual.</li>
+				<li><a href="https://www.digicert.com/internal-domain-name-tool.htm">DigiCert Internal Name Tool for Microsoft Exchange</a> - Helps you reconfigure Exchange servers to eliminate internal names.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="product-box">
+		<div class="container">
+			<h2 class="h2-large">Need More Help?</h2>
+			<p>Check out the following pages with instructions for solving common certificate installation issues:</p>
+			<ul>
+				<li><a href="https://www.digicert.com/ssl-support/certificate-name-mismatch-error.htm">Certificate name mismatch error</a></li>
+				<li><a href="https://www.digicert.com/ssl-support/certificate-not-trusted-error.htm">Certificate not trusted error</a></li>
+				<li><a href="https://www.digicert.com/ssl-support/windows-cross-signed-chain.htm">Windows intermediate certificate issues</a></li>
+				<li><a href="https://www.digicert.com/ssl-support/exchange-private-key-missing.htm">Exchange private key missing</a></li>
+				<li><a href="https://www.digicert.com/ssl-support/secure-and-nonsecure-items-error.htm">Secure and nonsecure items error</a></li>
+			</ul>
+			<p>For more instructions, see the <a href="https://www.digicert.com/support/">SSL Certificate support</a> home.</p>
+			<p>Please feel free to contact our support team 24/7 at +1-801-701-9600 if you need additional help or have questions.</p>
+		</div>
+	</div>
+		 <div class="hr">&nbsp;</div>
+</div>
+</div>
+
+    <a name="digicert_reviews"></a><div class="container" id="digicert_review_summary"></div><div class="container" id="digicert_reviews_header"><table width="100%" class="review_header">   </tr>       <td>           1-3 of 1187 reviews       </td>       <td align="right">           Sort by <select name="review_sort" id="review_sort" onchange="loadSortedReviews()">               <option value="recent" selected>most recent</option>               <option value="helpful">most helpful</option>           </select>       </td>   </tr></table></div><div class="container" id="digicert_reviews"><div class="content-core">    <span itemprop="review" itemscope="" itemtype="http://schema.org/Review"> 	<div class="content-header"> 		<div class="content-data-summary"> 			<div class="content-header-meta">                <table cellpadding="0" cellspacing="0">               <tr valign="top">                   <td width="100">       				<span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating"> 		        			<meta itemprop="ratingValue" content="5"> 				        	<meta itemprop="bestRating" content="5">        					<span class="rating-stars-container"> 		        				<abbr title="5 out of 5 stars." class="rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> 				        		<abbr title="5 out of 5 stars." class="rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> 						        <span class="off-screen">5 out of 5 stars.</span>    					    </span> 		        		</span>                   </td>                   <td>                       <div class="content-meta-wrapper">           				<span class="author" itemprop="author"> John Graff </span>&nbsp;   		        		<div class="content-datetime" role="presentation">    				        	<meta itemprop="dateCreated" content="02/25/2015">  	    					 	<meta itemprop="datePublished" content="02/25/2015">  	    					    <span class="content-datetime-stamp"> • Today </span>        				    </div>                         </div>                   </td>               </tr>               </table>			</div> 			<div class="content-title-container">  				<h4 class="content-title" itemprop="headline"> SSL certificate purchase</h4> 			</div>    		</div>  	</div>     	<div class="content-summary"> 		<div class="content-summary-body" itemprop="reviewBody"> 			<div class="content-summary-body-text"> Digicert support was extremely helpful guiding me through my first SSL Certificate purchase.</div> 		</div>    </div>    <div class="review-rating" id="digicert_rating_buttons1429">Helpful?        <button onclick="postReviewRating(1429,1)">Yes (1)</button>       <button onclick="postReviewRating(1429,0)">No (1)</button>   </div>	</span> </div><div class="content-core">    <span itemprop="review" itemscope="" itemtype="http://schema.org/Review"> 	<div class="content-header"> 		<div class="content-data-summary"> 			<div class="content-header-meta">                <table cellpadding="0" cellspacing="0">               <tr valign="top">                   <td width="100">       				<span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating"> 		        			<meta itemprop="ratingValue" content="5"> 				        	<meta itemprop="bestRating" content="5">        					<span class="rating-stars-container"> 		        				<abbr title="5 out of 5 stars." class="rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> 				        		<abbr title="5 out of 5 stars." class="rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> 						        <span class="off-screen">5 out of 5 stars.</span>    					    </span> 		        		</span>                   </td>                   <td>                       <div class="content-meta-wrapper">           				<span class="author" itemprop="author"> Lance G. </span>&nbsp;   		        		<div class="content-datetime" role="presentation">    				        	<meta itemprop="dateCreated" content="02/25/2015">  	    					 	<meta itemprop="datePublished" content="02/25/2015">  	    					    <span class="content-datetime-stamp"> • Today </span>        				    </div>                         </div>                   </td>               </tr>               </table>			</div> 			<div class="content-title-container">  				<h4 class="content-title" itemprop="headline"> Great Customer Service</h4> 			</div>    		</div>  	</div>     	<div class="content-summary"> 		<div class="content-summary-body" itemprop="reviewBody"> 			<div class="content-summary-body-text"> Quick Cert request and approval, great service.</div> 		</div>    </div>    <div class="review-rating" id="digicert_rating_buttons1428">Helpful?        <button onclick="postReviewRating(1428,1)">Yes (0)</button>       <button onclick="postReviewRating(1428,0)">No (1)</button>   </div>	</span> </div><div class="content-core">    <span itemprop="review" itemscope="" itemtype="http://schema.org/Review"> 	<div class="content-header"> 		<div class="content-data-summary"> 			<div class="content-header-meta">                <table cellpadding="0" cellspacing="0">               <tr valign="top">                   <td width="100">       				<span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating"> 		        			<meta itemprop="ratingValue" content="5"> 				        	<meta itemprop="bestRating" content="5">        					<span class="rating-stars-container"> 		        				<abbr title="5 out of 5 stars." class="rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> 				        		<abbr title="5 out of 5 stars." class="rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> 						        <span class="off-screen">5 out of 5 stars.</span>    					    </span> 		        		</span>                   </td>                   <td>                       <div class="content-meta-wrapper">           				<span class="author" itemprop="author"> Arild </span>&nbsp;   		        		<div class="content-datetime" role="presentation">    				        	<meta itemprop="dateCreated" content="02/25/2015">  	    					 	<meta itemprop="datePublished" content="02/25/2015">  	    					    <span class="content-datetime-stamp"> • Today </span>        				    </div>                         </div>                   </td>               </tr>               </table>			</div> 			<div class="content-title-container">  				<h4 class="content-title" itemprop="headline"> Great</h4> 			</div>    		</div>  	</div>     	<div class="content-summary"> 		<div class="content-summary-body" itemprop="reviewBody"> 			<div class="content-summary-body-text"> Company verified certificate was issued quickly. Lots of download options for the certificates, in addition to the certificate tool, makes it easy to install on Azure and linux. Root-certificate is pre-installed on iOS and Android, which makes it trouble free for apps. </div> 		</div>    </div>    <div class="review-rating" id="digicert_rating_buttons1426">Helpful?        <button onclick="postReviewRating(1426,1)">Yes (0)</button>       <button onclick="postReviewRating(1426,0)">No (1)</button>   </div>	</span> </div></div><div class="container" id="digicert_reviews_more"><button onclick="loadReviews();">More Reviews</button></div><script>loadSummary();</script>	<div class="container-inset">
+		<div class="container">
+			<div class="columns">
+			
+				<div class="column">
+				<h4>SSL Certificate Support</h4>
+					<ul>
+						<li><a href="https://www.digicert.com/ssl.htm">SSL Certificate Help</a></li>
+						<li><a href="https://www.digicert.com/setting-up-ssl.htm">Check SSL Install</a></li> 
+						<li><a href="https://www.digicert.com/exchange-ssl-certificate.htm">SSL Exchange</a></li> 
+						<li><a href="https://www.digicert.com/es/">Certificado SSL</a></li> 
+						<li><a href="https://www.digicert.com/security-certificate-support.htm">SSL Support Home</a></li> 
+						<li><a href="https://www.digicert.com/web-pki-manager-tutorial.htm">PKI Tutorial</a></li> 
+						<li><a href="https://www.digicert.com/ssl-certificate.htm">SSL Certificates</a></li> 
+					</ul>
+				</div>
+				<div class="column">
+				<h4>Related Links</h4>
+					<ul><li><a href="https://www.digicert.com/csr-creation.htm">CSR Creation</a></li>
+					<li><a href="https://www.digicert.com/ssl-certificate-installation.htm">SSL Certificate Installation</a></li>
+					<li><a href="https://www.digicert.com/import-export-ssl-certificate.htm">SSL Import/Export to pfx</a></li>
+					<li><a href="https://www.digicert.com/ssl-certificate-renewal.htm">Renewals Explained</a></li>
+					<li><a href="https://www.digicert.com/ssl-certificate-purchase-validation.htm">Validation Doc Requirements</a></li>
+					</ul>
+				</div>
+				<div class="column">
+				<h4>Certificate Types</h4>
+					<ul><li><a href="https://www.digicert.com/ssl-certificate.htm">SSL Plus</a></li>
+					<li><a href="https://www.digicert.com/wildcard-ssl-certificates.htm">Wildcard SSL Plus</a></li>
+					<li><a href="https://www.digicert.com/unified-communications-ssl-tls.htm">Unified Communications</a></li>
+					<li><a href="https://www.digicert.com/welcome/ssl-plus-compared.htm">SSL Plus Comparison</a></li>
+					<li><a href="https://www.digicert.com/digital-certificate.htm">Digital Certificates</a></li>
+					<li><a href="https://www.digicert.com/shop-by-server.htm">Shop SSL Certificates</a></li> 
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</div><!-- end #mainContainer -->
+
+<header class="spm spm-header">
+	<div class="container">
+		<a class="spm spm-logo" href="/index.html"></a>
+		<p class="phone spm spm-header-phone">
+			1.801.701.9600		</p>
+		<ul>
+			<li class="my-account">
+				<a class="spm spm-icon-account" href="https://www.digicert.com/account/">My Account</a>
+			</li>
+			<li class="live-chat">
+				<a class="spm spm-icon-chat" href="/link/chat.php">
+					Live Chat
+				</a>
+			</li>
+			<li class="language-selector">
+<a class="spm spm-icon-downarrow">English</a>
+<ul class="dropdown">
+<li><a href="#" for="/help" onclick="location.href=this.getAttribute('for');return false;">English</a>
+<li><a href="#" for="/es/ayuda" onclick="location.href=this.getAttribute('for');return false;">Español</a>
+</ul>
+</li>		</ul>
+	</div>
+</header>
+
+<div id="searchForm">
+	<form action="/ssl-support/search.htm" id="cse-search-box">
+		<div>
+			<input type="hidden" name="cx" value="011659664807954164122:stqdgkldltu" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" id="searchBox" name="q" size="31" class="spm spm-icon-search" />
+		</div>
+	</form>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="copyright">
+			<a class="spm spm-logo-footer" href="/index.html" style="display:inline"><img src="/images/digi-footer-logo.png" border="0" style="display:inline"></a>
+			&copy; 2003-2015 DigiCert&reg; Inc &#8226; <i>SSL Certificate Authority</i> &#8226; All Rights Reserved | All trademarks displayed on this web site are the exclusive property of the respective holders.						<div class="social-tiny">
+				<a href="https://plus.google.com/+DigiCertIncLehi/posts" rel="me" id="icon_googleplus">&nbsp;</a>
+				<a href="https://facebook.com/digicert" rel="me" id="icon_facebook">&nbsp;</a>
+				<a href="https://www.youtube.com/user/DigiCertSSL" rel="me" id="icon_youtube">&nbsp;</a>
+				<a href="https://twitter.com/digicert" rel="me" id="icon_twitter">&nbsp;</a>
+				<a href="https://www.linkedin.com/company/digicert-inc." rel="me" id="icon_linkedin">&nbsp;</a>
+			</div>
+					</div>
+	</div>
+	<hr width="980" style="border-bottom: 1px solid #fff; margin-top:-5px;">
+	<table class="badges" border="0">
+	<tr>
+		<td width="100">
+			<div id="DigiCertClickIDlfC4Ai8"></div>
+		</td>
+		<td class="external-seals" width="200">
+			<a rel="nofollow" id="eseal-bbb" href="http://www.bbb.org/utah/business-reviews/internet-services/digicert-in-lehi-ut-22003642" target="_blank">&nbsp;</a>
+		</td>
+		<td class="external-seals" width="100">
+			<a rel="nofollow" id="eseal-webtrust" href="https://cert.webtrust.org/ViewSeal?id=1710" title="WebTrust for Certification Authorities" target="_blank">&nbsp;</a>
+		</td>
+		<td width="35"></td>
+		<td class="external-seals" width="212">
+			<div id="12fe2280-1e8f-4309-976e-e4c43c48f7ab" style="width:200px;"><script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/DigiCert/asc?rid=12fe2280-1e8f-4309-976e-e4c43c48f7ab"></script><a id="eseal-truste" href="//privacy.truste.com/privacy-seal/DigiCert/validation?rid=606159ea-c140-4704-a656-7765661cb882" title="TRUSTe online privacy certification" target="_blank"><img style="border: none; padding-top:20px;" src="//privacy-policy.truste.com/privacy-seal/DigiCert/seal?rid=606159ea-c140-4704-a656-7765661cb882" alt="TRUSTe online privacy certification"/></a></div>
+		</td>
+		<td class="external-seals" width="153">
+			<a rel="nofollow" id="eseal-cacouncil">&nbsp;</a>
+		</td>
+		<td align="right" width="180">
+			<a href="/digital-certificate-guarantee.htm">
+	<img src="/images/30-day-guarantee_en.png" alt="30 Day Money Back Guarantee" />
+</a>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var __dcid = __dcid || [];
+	__dcid.push(["DigiCertClickIDlfC4Ai8", "11", "m", "black", "_lfC4Ai8"]);
+	(function () {
+		var cid = document.createElement("script");
+		cid.type = "text/javascript";
+		cid.async = true;
+		cid.src = "//seal.digicert.com/seals/cascade/seal.min.js";
+		var s = document.getElementsByTagName("script");
+		var ls = s[(s.length - 1)];
+		ls.parentNode.insertBefore(cid, ls.nextSibling);
+	}());
+</script>
+			<hr width="980" style="border-bottom: 1px solid #fff; margin-top:-5px;">
+		<div class="container footer-nav" style="border-bottom:none;">
+			<ul>
+				<li><a href="/security-terms.htm">Terms of Use</a></li><li><a href="/digital-certificate-guarantee.htm">Money Back Guarantee</a></li><li><a href="/digicert-privacy-policy.htm">Privacy Policy</a></li><li><a href="/ssl-cps-repository.htm">Legal Repository</a></li><li><a href="https://www.digicert.com/newsroom.htm">Newsroom</a></li>			</ul>
+		</div>
+	</footer>
+
+
+<script type="text/javascript">
+  document.write('<scr'+'ipt type="text/javascript" src="' +
+                 document.location.protocol +
+                 '//munchkin.marketo.net/munchkin-beta.js"><\/scr'+'ipt>');
+</script>
+<script>
+	if(window.addEventListener){
+		window.addEventListener("load", function(){ if (typeof mktoMunchkin!='undefined') { mktoMunchkin("825-WPK-761");} }, false);
+	}
+	else
+	{
+		window.attachEvent("onload", function(){ if (typeof mktoMunchkin!='undefined') { mktoMunchkin("825-WPK-761");} });
+	}
+</script>
+
+	
+<!-- Begin AdRoll tag -->
+<script type="text/javascript">
+adroll_adv_id = "ATBIFF55V5GWXDNBDARFON";
+adroll_pix_id = "T3KWMHCQLNDP3OKRQUYGJX";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<!-- End AdRoll tag -->
+
+
+	<script language="JavaScript" type="text/javascript"><!--
+				$('a[href^="https://www.digicert.com/order/order-1.php"]').click(function() {
+			s.linkTrackVars='events';
+			s.linkTrackEvents=s.events='scCheckout';
+			s.tl(this,'o','Order Step 1');
+		});
+
+		if(typeof(s) != "undefined")
+		{
+			s.pageName="misc tools:ssl certificate checker"
+			var a = s.pageName.split(":");
+			s.channel = a[0];
+			s.prop1 = a[1];
+			s.server="www.digicert.com"
+			s.prop4=""
+			s.prop5=""
+						s.prop19="en"
+			s.eVar19="en"
+			/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+			var s_code=s.t();if(s_code)document.write(s_code)
+		}
+		//--></script>
+</body>
+</html>
